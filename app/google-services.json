@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "117187952471",
+    "project_id": "icovidclusterpredictor",
+    "storage_bucket": "icovidclusterpredictor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117187952471:android:8c1def607b18014945c812",
+        "android_client_info": {
+          "package_name": "com.example.icovidclusterpredictor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117187952471-2rtoh5dgrq7q7nsrf53i4rmt1cm62l9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBiiDnAzid-YrfgbHSyXeC5oA5iZJrb_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117187952471-2rtoh5dgrq7q7nsrf53i4rmt1cm62l9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

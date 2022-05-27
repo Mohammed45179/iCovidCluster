@@ -14,7 +14,7 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="welcome">"Welcome To our APP !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
@@ -23,4 +23,14 @@
     <string name="title_activity_area">Area</string>
     <string name="title_activity_predict_covid_cluster">PredictCovidCluster</string>
     <string name="title_activity_visulize_covid_cluster">Map</string>
+    <string name="share_yes_string">Yes</string>
+    <string name="share_no_string">No </string>
+    <string name="share_info">share_info</string>
+    <string name="share_info_string">Share location info</string>
+    <string name="area_code_string">area_code_string</string>
+    <string name="suburb_string">Suburb</string>
+    <string name="create_profile_string">Create Area Profile</string>
+    <string name="city_string">City</string>
+    <string name="name_string">Name</string>
+    <string name="title_activity_show_areas">Show Areas Covid Info</string>
 </resources>

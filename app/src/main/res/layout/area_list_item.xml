@@ -14,8 +14,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="NumCases"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextName"
-        tools:layout_editor_absoluteX="99dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextName" />
 
     <EditText
         android:id="@+id/editTextTextNumDeaths"
@@ -26,9 +27,10 @@
         android:inputType="textPersonName"
         android:text="numDeaths"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextNumCases"
-        app:layout_constraintVertical_bias="0.032"
-        tools:layout_editor_absoluteX="99dp" />
+        app:layout_constraintVertical_bias="0.032" />
 
     <EditText
         android:id="@+id/editTextTextName"
@@ -38,6 +40,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="99dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

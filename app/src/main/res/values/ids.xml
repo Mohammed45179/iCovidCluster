@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lbNumCases" type="id"/>
+    <item name="area_name" type="id"/>
+    <item name="area_number_cases" type="id"/>
+    <item name="lblAreaCode2" type="id"/>
+    <item name="lbl1" type="id"/>
+    <item name="lbl2" type="id"/>lbl2
+    <item name="area_info_code" type="id"/>
+    <item name="area_info_name" type="id"/>
+    <item name="lbl3" type="id"/>
+    <item name="area_info_number_cases" type="id" />
+    <item name="area_info_number_deaths" type="id"/>
+    <item name="lbl4" type="id"/>
+    <item name="lb5" type="id"/>
+</resources>

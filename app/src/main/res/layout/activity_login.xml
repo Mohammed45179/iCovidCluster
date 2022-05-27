@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,9 +13,9 @@
     tools:context=".ui.login.LoginActivity">
 
     <EditText
-        android:id="@+id/uname"
-        android:layout_width="340dp"
-        android:layout_height="80dp"
+        android:id="@+id/user_name"
+        android:layout_width="328dp"
+        android:layout_height="78dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
@@ -31,12 +32,10 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/upassd"
-        android:layout_width="340dp"
+        android:id="@+id/password"
+        android:layout_width="326dp"
         android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
         android:background="@color/design_default_color_on_primary"
         android:fontFamily="serif"
         android:gravity="center|center_vertical"
@@ -47,9 +46,9 @@
         android:selectAllOnFocus="true"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uname" />
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
 
     <Button
         android:id="@+id/login"
@@ -68,22 +67,18 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upassd"
-        app:layout_constraintVertical_bias="0.818" />
-
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.164" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="279dp"
-        android:layout_height="273dp"
+        android:layout_width="254dp"
+        android:layout_height="220dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/login" />
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
