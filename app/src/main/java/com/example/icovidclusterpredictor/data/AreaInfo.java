@@ -11,14 +11,34 @@ public class AreaInfo {
     private String _postCode;
     private List<String> _neighbours;
     private int _numberOfCases;
-    private int numberOfDeaths;
-    private float _inCluster;
+    private int _numberOfDeaths;
+    private double _inCluster;
 
-    public float get_inCluster() {
+    public void set_numberOfDeaths(int _numberOfDeaths) {
+        this._numberOfDeaths = _numberOfDeaths;
+    }
+
+    public List<SocialCoorelation> get_socialCoorelations() {
+        return _socialCoorelations;
+    }
+
+    public void set_socialCoorelations(List<SocialCoorelation> _socialCoorelations) {
+        this._socialCoorelations = _socialCoorelations;
+    }
+
+    private List<SocialCoorelation> _socialCoorelations;
+
+
+//    -37.691384, 145.057249
+//            -37.692916, 145.059151
+//            -37.691391, 145.057223
+//            -37.692262, 145.050515
+
+    public double get_inCluster() {
         return _inCluster;
     }
 
-    public void set_inCluster(float _inCluster) {
+    public void set_inCluster(double _inCluster) {
         this._inCluster = _inCluster;
     }
 
@@ -30,12 +50,14 @@ public class AreaInfo {
         this._numberOfCases = _numberOfCases;
     }
 
+
     public int getNumberOfDeaths() {
-        return numberOfDeaths;
+        return _numberOfDeaths;
     }
 
+
     public void setNumberOfDeaths(int numberOfDeaths) {
-        this.numberOfDeaths = numberOfDeaths;
+        this._numberOfDeaths = numberOfDeaths;
     }
 
     public String getName() {
@@ -45,10 +67,13 @@ public class AreaInfo {
         this._name = name;
     }
 
-    public AreaInfo(String _name, String _postCode, List<String> _neighbours) {
+    public AreaInfo(String _name, String _postCode, List<String> _neighbours, int _numberOfCases, int _numberOfDeaths) {
         this._name = _name;
         this._postCode = _postCode;
         this._neighbours = _neighbours;
+        this._numberOfCases = _numberOfCases;
+        this._numberOfDeaths = _numberOfDeaths;
+        _socialCoorelations = new ArrayList<>();
     }
 
     public String get_name() {
@@ -77,12 +102,28 @@ public class AreaInfo {
 
 
     // set list values
-    public static ArrayList<AreaInfo> GenerateRecipeList() {
+    public static ArrayList<AreaInfo> GenerateAreaList() {
         ArrayList<AreaInfo> areaList = new ArrayList<>();
-        areaList.add(new AreaInfo("area1","4563",new ArrayList<String>(Arrays.asList("4511", "4512", "4555"))));
-        areaList.add(new AreaInfo("area2","4555",new ArrayList<String>(Arrays.asList("4511", "4512", "4563"))));
-        areaList.add(new AreaInfo("area3","4512",new ArrayList<String>(Arrays.asList("4511", "4555", "4563"))));
-        areaList.add(new AreaInfo("area4","4511",new ArrayList<String>(Arrays.asList("4512", "4555", "4563"))));
+        int index = 0;
+        List<SocialCoorelation> socialCoorelations = new ArrayList<>(Arrays.asList(new SocialCoorelation(1,0.65), new SocialCoorelation(2,0.80), new SocialCoorelation(3,0.65)));
+        areaList.add(new AreaInfo("area1","4563",new ArrayList<String>(Arrays.asList("4511", "4512", "4555")),1500,50));
+        areaList.get(index).set_socialCoorelations(socialCoorelations);
+        index++;
+
+        socialCoorelations = new ArrayList<>(Arrays.asList(new SocialCoorelation(0,0.55), new SocialCoorelation(2,0.80), new SocialCoorelation(3,0.65)));
+        areaList.add(new AreaInfo("area2","4555",new ArrayList<String>(Arrays.asList("4511", "4512", "4563")),2600,88));
+        areaList.get(index).set_socialCoorelations(socialCoorelations);
+        index++;
+
+        socialCoorelations = new ArrayList<>(Arrays.asList(new SocialCoorelation(0,0.72), new SocialCoorelation(1,0.60), new SocialCoorelation(3,0.60)));
+        areaList.add(new AreaInfo("area3","4512",new ArrayList<String>(Arrays.asList("4511", "4555", "4563")),4200,110));
+        areaList.get(index).set_socialCoorelations(socialCoorelations);
+        index++;
+
+        socialCoorelations = new ArrayList<>(Arrays.asList(new SocialCoorelation(0,0.65), new SocialCoorelation(1,0.70), new SocialCoorelation(2,0.55)));
+        areaList.add(new AreaInfo("area4","4511",new ArrayList<String>(Arrays.asList("4512", "4555", "4563")),3600,99));
+        areaList.get(index).set_socialCoorelations(socialCoorelations);
+
         return areaList;
     }
 }

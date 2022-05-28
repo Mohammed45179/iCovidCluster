@@ -1,6 +1,7 @@
 package com.example.icovidclusterpredictor.data;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,8 +55,8 @@ public class CovidAreaDataAdapter extends RecyclerView.Adapter<CovidAreaDataAdap
 
         _nameTextView.setText(area.get_name());
         _postCodeTextView.setText(area.get_postCode());
-        _numCasesTextView.setText(area.get_numberOfCases());
-        _numDeathsTextView.setText(area.getNumberOfDeaths());
+        _numCasesTextView.setText(String.valueOf(area.get_numberOfCases()));
+        _numDeathsTextView.setText(String.valueOf(area.getNumberOfDeaths()));
         _clusterStatusTextView.setText(String.format("%.2f", area.get_inCluster()));
         Button _showClusterInfo = holder._showClusterInfo;
 
@@ -67,6 +68,7 @@ public class CovidAreaDataAdapter extends RecyclerView.Adapter<CovidAreaDataAdap
         _showClusterInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String TAG = "Covid Prediction";
                 Map<String, Object> areaSelected = new HashMap<>();
                 areaSelected.put("user", user.getUserEmail());
                 areaSelected.put("name", area.get_name());
@@ -82,13 +84,13 @@ public class CovidAreaDataAdapter extends RecyclerView.Adapter<CovidAreaDataAdap
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
-                                //Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                //Log.w(TAG, "Error adding document", e);
+                                Log.w(TAG, "Error adding document", e);
                             }
                         });
             }

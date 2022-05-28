@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.icovidclusterpredictor.data.AreaInfo;
 import com.example.icovidclusterpredictor.data.CovidAreaDataAdapter;
+import com.example.icovidclusterpredictor.data.PredictionCovidResult;
 
 import java.util.ArrayList;
 
@@ -33,7 +34,9 @@ public class ShowAreaInfoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         RecyclerView recyclerView = view.findViewById(R.id.areaRecyclerView);
-        areas = AreaInfo.GenerateRecipeList();
+        areas = AreaInfo.GenerateAreaList();
+        PredictionCovidResult.predict_covid_cluster(areas);
+
         CovidAreaDataAdapter areaDataAdapter = new CovidAreaDataAdapter(areas, getContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerView.setAdapter(areaDataAdapter);
